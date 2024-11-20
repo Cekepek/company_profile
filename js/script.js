@@ -95,7 +95,7 @@
         translateZ: 0,
         opacity: [0,1],
         easing: "easeOutExpo",
-        duration: 1200,
+        duration: 2000,
         delay: (el, i) => 30 * i
       });
   }
@@ -108,7 +108,7 @@
         translateX: [0,-30],
         opacity: [1,0],
         easing: "easeInExpo",
-        duration: 1100,
+        duration: 2000,
         delay: (el, i) => 30 * i
       })
   }
@@ -117,8 +117,8 @@
   var initSlider = function() {
     // homepage slider | slick slider
     $('.main-slider').slick({
-        autoplay: false,
-        autoplaySpeed: 4000,
+        autoplay: true,
+        autoplaySpeed: 3000,
         fade: true,
         prevArrow: $('.prev'),
         nextArrow: $('.next'),
@@ -206,11 +206,14 @@
     var body = undefined;
     var menu = undefined;
     var menuItems = undefined;
+    var menuItem = undefined;
     var init = function init() {
       body = document.querySelector('body');
       menu = document.querySelector('.menu-btn');
       menuItems = document.querySelectorAll('.nav__list-item');
+      menuItem = document.querySelectorAll('.hover-target');
       applyListeners();
+      menuListeners();
     };
     var applyListeners = function applyListeners() {
       menu.addEventListener('click', function () {
@@ -219,6 +222,26 @@
     };
     var toggleClass = function toggleClass(element, stringClass) {
       if (element.classList.contains(stringClass)) element.classList.remove(stringClass);else element.classList.add(stringClass);
+    };
+    var menuListeners = function menuListeners() {
+      menuItem.forEach(function (item) {
+        item.addEventListener('click', function (event) {
+          event.preventDefault(); // Mencegah perilaku default sementara
+          
+          // Navigasi ke ID yang ditentukan di atribut href
+          var targetId = item.getAttribute('href'); // Ambil nilai href
+          if (targetId.startsWith('#')) {
+            var targetElement = document.querySelector(targetId); // Pilih elemen dengan ID target
+            if (targetElement) {
+              targetElement.scrollIntoView({ behavior: 'smooth' }); // Gulir secara halus
+            }
+          }
+          var checkbox = document.getElementById("menu-toggle");
+          checkbox.checked = false;
+          // Tetap jalankan toggleClass untuk body
+          toggleClass(body, 'nav-active');
+        });
+      });
     };
     init();
   }
