@@ -223,26 +223,26 @@
     var toggleClass = function toggleClass(element, stringClass) {
       if (element.classList.contains(stringClass)) element.classList.remove(stringClass);else element.classList.add(stringClass);
     };
-    var menuListeners = function menuListeners() {
-      menuItem.forEach(function (item) {
-        item.addEventListener('click', function (event) {
-          event.preventDefault(); // Mencegah perilaku default sementara
+    // var menuListeners = function menuListeners() {
+    //   menuItem.forEach(function (item) {
+    //     item.addEventListener('click', function (event) {
+    //       event.preventDefault(); // Mencegah perilaku default sementara
           
-          // Navigasi ke ID yang ditentukan di atribut href
-          var targetId = item.getAttribute('href'); // Ambil nilai href
-          if (targetId.startsWith('#')) {
-            var targetElement = document.querySelector(targetId); // Pilih elemen dengan ID target
-            if (targetElement) {
-              targetElement.scrollIntoView({ behavior: 'smooth' }); // Gulir secara halus
-            }
-          }
-          var checkbox = document.getElementById("menu-toggle");
-          checkbox.checked = false;
-          // Tetap jalankan toggleClass untuk body
-          toggleClass(body, 'nav-active');
-        });
-      });
-    };
+    //       // Navigasi ke ID yang ditentukan di atribut href
+    //       var targetId = item.getAttribute('href'); // Ambil nilai href
+    //       if (targetId.startsWith('#')) {
+    //         var targetElement = document.querySelector(targetId); // Pilih elemen dengan ID target
+    //         if (targetElement) {
+    //           targetElement.scrollIntoView({ behavior: 'smooth' }); // Gulir secara halus
+    //         }
+    //       }
+    //       var checkbox = document.getElementById("menu-toggle");
+    //       checkbox.checked = false;
+    //       // Tetap jalankan toggleClass untuk body
+    //       toggleClass(body, 'nav-active');
+    //     });
+    //   });
+    // };
     init();
   }
 

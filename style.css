@@ -2093,10 +2093,10 @@ body.nav-active .nav__block img {
   top: 0;
   right: 0;
   left: 0;
-  width: 50%;
+  width: 100%;
   text-align: center;
   margin: 0 auto;
-  margin-top: 300px;
+  margin-top: 350px;
 }
 
 .main-slider .banner-content h2.banner-title {
