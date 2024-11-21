@@ -3194,3 +3194,62 @@ footer#footer {
 .parallax-wrap .parallax-image {
   position: absolute;
 }
+
+.back-to-top {
+  position: fixed;
+  /* display: none; */
+  background: var(--accent-color);
+  color: var(--dark-color);
+  padding: 0px 12px 9px 12px;
+  font-size: 24px;
+  border-radius: 50px;
+  right: 15px;
+  bottom: 15px;
+  width:50px;
+	height:50px;
+  transition: background 0.5s;
+}
+
+.back-to-top:focus {
+  background: var(--dark-color);
+  color: var(--bs-light);
+  outline: none;
+}
+
+.back-to-top:hover {
+  background: var(--dark-color);
+  color: var(--bs-light);
+}
+
+.floating {
+  position:fixed;
+	width:50px;
+	height:50px;
+	bottom:75px;
+	right:15px;
+  /* padding: 0 12px 9px 12px; */
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+ }
+ .floating:focus {
+  /* background: linear-gradient(to left,#cda03b 30%, #8f6c1e 100%); */
+  color: var(--accent-color);
+  outline: none;
+}
+.floating:hover {
+  background: var(--accent-color);
+  /* color: linear-gradient(to left,#cda03b 30%, #8f6c1e 100%); */
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 15px;
+  }
+
+  .floating{
+    bottom: 75px;
+  }
+}
