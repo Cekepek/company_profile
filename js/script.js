@@ -4,7 +4,7 @@
 
   // init Isotope
 	var initIsotope = function () {
-    $(document).ready(function(){
+    $(document).ready(function() {
       $('.grid').each(function () {
 
         // $('.grid').imagesLoaded( function() {
@@ -65,11 +65,8 @@
             $(this).addClass('is-checked-interior');
           });
         });
-        // });
-  
       });
     });
-		
 	}
 
   var initTexts = function(){
@@ -258,10 +255,11 @@
 
   $(document).ready(function(){
 
+    console.log('TESTTTT');
     stickyHeader();
     searchButton();
     initSlider();
-		initIsotope();
+		// initIsotope();
     jsTabs();
     initChocolat();
     overlayMenu();
