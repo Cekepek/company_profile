@@ -66,11 +66,11 @@
           });
         });
         // });
-
+  
       });
     });
-
-  }
+		
+	}
 
   var initTexts = function () {
     // Wrap every letter in a span
@@ -357,11 +357,10 @@
   $(document).ready(function () {
 
 
-    ambilPortfolio();
     stickyHeader();
     searchButton();
     initSlider();
-    // initIsotope();
+		initIsotope();
     jsTabs();
     initChocolat();
     overlayMenu();

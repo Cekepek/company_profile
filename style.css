@@ -1376,6 +1376,12 @@ This is main CSS file that contains custom style rules used in this template
   opacity: 1;
 }
 
+@media screen and (max-width: 580px) {
+  .main-logo img {
+    width: 150px;
+  }
+}
+
 
 .main-logo a {
   font-family: "playfair display", Georgia, serif;
@@ -2027,6 +2033,7 @@ body.nav-active .nav__block .nav__block-item {
   transition: opacity .6s ease, transform .6s ease;
 }
 
+
 .nav__block img:nth-child(1) {
   transition-delay: 300ms;
 }
@@ -2071,8 +2078,18 @@ body.nav-active .nav__block img {
   transform: rotate(-90deg) scale(3);
   opacity: 1;
   color: #000;
-  /* transform: translateX(0%); */
+  transform: translateX(0%);
 }
+
+@media only screen and (max-width: 360px) {
+  body.nav-active .nav__block img {
+    transform:  scale(1);
+    opacity: 1;
+    color: #000;
+    transform: translateX(0%);
+  }
+}
+
 
 /* 4.2 Homepage Slider
 --------------------------------------------------------------*/
@@ -2083,6 +2100,7 @@ body.nav-active .nav__block img {
 .main-slider .slick-slide {
   height: 90vh;
 }
+
 
 .main-slider .slider-item {
   position: relative;
@@ -2158,6 +2176,9 @@ body.nav-active .nav__block img {
   .main-slider .banner-content h2.banner-title {
     font-size: 4.5em;
   }
+  .main-slider .banner-content h1.banner-title {
+    font-size: 2.5em;
+  }
 }
 
 @media only screen and (max-width: 1199px) {
@@ -2167,28 +2188,36 @@ body.nav-active .nav__block img {
 
   .main-slider .banner-content h2.banner-title {
     font-size: 4em;
+  }.main-slider .banner-content h1.banner-title {
+    font-size: 2em;
   }
 }
 
 @media only screen and (max-width: 999px) {
   .main-slider .banner-content {
-    margin-top: 100px;
+    margin-top: 300px;
   }
 
   .main-slider .banner-content h2.banner-title {
     font-size: 3.5em;
+  }.main-slider .banner-content h1.banner-title {
+    font-size: 1.5em;
   }
 }
 
 @media only screen and (max-width: 876px) {
   .main-slider .banner-content h2.banner-title {
     font-size: 3em;
+  }.main-slider .banner-content h1.banner-title {
+    font-size: 1em;
   }
 }
 
 @media only screen and (max-width: 753px) {
   .main-slider .banner-content h2.banner-title {
     font-size: 3em;
+  }.main-slider .banner-content h1.banner-title {
+    font-size: 1em;
   }
 
   #intro .button-container {
@@ -2198,7 +2227,7 @@ body.nav-active .nav__block img {
 
 @media only screen and (max-width: 580px) {
   .main-slider .banner-content {
-    margin-top: 180px;
+    margin-top: 250px;
   }
 
   .main-slider .banner-content {
@@ -2210,8 +2239,14 @@ body.nav-active .nav__block img {
   }
 
   .main-slider .slider-item img {
-    height: 100%;
-    max-width: fit-content;
+    height: 100%; /* Ensure image fills the entire slide height */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire area */
+    width: auto;
+  }
+  .main-slider .banner-content h2.banner-title {
+    font-size: 2em;
+  }.main-slider .banner-content h1.banner-title {
+    font-size: 1em;
   }
 }
 
@@ -2489,7 +2524,7 @@ footer#footer {
 }
 
 #footer img.footer-logo {
-  transform: scale(1.5);
+  /* transform: scale(1.5); */
   margin-bottom: 30px;
 }
 
