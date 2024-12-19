@@ -354,6 +354,10 @@
     })
   }
 
+  var contactUs = function(){
+    
+  }
+
   $(document).ready(function () {
     ambilPortfolio();
 

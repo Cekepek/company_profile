@@ -3279,6 +3279,29 @@ footer#footer {
   /* color: linear-gradient(to left,#cda03b 30%, #8f6c1e 100%); */
 }
 
+.floating2 {
+  position:fixed;
+	width:50px;
+	height:50px;
+	bottom:135px;
+	right:15px;
+  /* padding: 0 12px 9px 12px; */
+	background-color:var(--dark-color);
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+ }
+ .floating2:focus {
+  background: var(--accent-color);
+  color: var(--bs-light);
+  outline: none;
+}
+.floating2:hover {
+  background: var(--accent-color);
+  color: var(--bs-light);
+}
+
 @media (max-width: 768px) {
   .back-to-top {
     bottom: 15px;
