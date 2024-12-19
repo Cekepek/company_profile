@@ -1,10 +1,10 @@
-(function($) {
+(function ($) {
 
   "use strict";
 
   // init Isotope
-	var initIsotope = function () {
-    $(document).ready(function(){
+  var initIsotope = function () {
+    $(document).ready(function () {
       $('.grid').each(function () {
 
         // $('.grid').imagesLoaded( function() {
@@ -12,20 +12,20 @@
         var $buttonGroup = $('.button-group');
         var $checked = $buttonGroup.find('.is-checked');
         var filterValue = $checked.attr('data-filter');
-  
+
         var $grid = $('.grid').isotope({
           itemSelector: '.portfolio-item',
           // layoutMode: 'fitRows',
           filter: filterValue
         });
-  
+
         // bind filter button click
         $('.button-group').on('click', 'a', function (e) {
           e.preventDefault();
           filterValue = $(this).attr('data-filter');
           $grid.isotope({ filter: filterValue });
         });
-  
+
         // change is-checked class on buttons
         $('.button-group').each(function (i, buttonGroup) {
           $buttonGroup.on('click', 'a', function () {
@@ -34,30 +34,30 @@
           });
         });
         // }); 
-  
+
       });
-  
+
       $('.grid-interior').each(function () {
-  
+
         // $('.grid').imagesLoaded( function() {
         // images have loaded
         var $buttonGroup = $('.button-group-interior');
         var $checked = $buttonGroup.find('.is-checked-interior');
         var filterValue = $checked.attr('data-filter');
-  
+
         var $grid = $('.grid-interior').isotope({
           itemSelector: '.portfolio-item-interior',
           // layoutMode: 'fitRows',
           filter: filterValue
         });
-  
+
         // bind filter button click
         $('.button-group-interior').on('click', 'a', function (e) {
           e.preventDefault();
           filterValue = $(this).attr('data-filter');
           $grid.isotope({ filter: filterValue });
         });
-  
+
         // change is-checked class on buttons
         $('.button-group-interior').each(function (i, buttonGroup) {
           $buttonGroup.on('click', 'a', function () {
@@ -66,49 +66,49 @@
           });
         });
         // });
-  
+
       });
     });
-		
-	}
 
-  var initTexts = function(){
+  }
+
+  var initTexts = function () {
     // Wrap every letter in a span
-     $('.txt-fx').each(function(){
+    $('.txt-fx').each(function () {
       this.innerHTML = this.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
     });
 
     anime.timeline()
       .add({
         targets: '.txt-fx .letter',
-        translateX: [0,-30],
-        opacity: [1,0],
+        translateX: [0, -30],
+        opacity: [1, 0],
         easing: "easeInExpo",
         duration: 100,
         delay: (el, i) => 0
       });
   }
-  var animateTexts = function(){
+  var animateTexts = function () {
 
     anime.timeline()
       .add({
         targets: '.slick-current .txt-fx .letter',
-        translateX: [40,0],
+        translateX: [40, 0],
         translateZ: 0,
-        opacity: [0,1],
+        opacity: [0, 1],
         easing: "easeOutExpo",
         duration: 2000,
         delay: (el, i) => 30 * i
       });
   }
 
-  var hideTexts = function(){
+  var hideTexts = function () {
 
     anime.timeline()
       .add({
         targets: '.slick-current .txt-fx .letter',
-        translateX: [0,-30],
-        opacity: [1,0],
+        translateX: [0, -30],
+        opacity: [1, 0],
         easing: "easeInExpo",
         duration: 2000,
         delay: (el, i) => 30 * i
@@ -116,34 +116,34 @@
   }
 
   // initialize all the sliders
-  var initSlider = function() {
+  var initSlider = function () {
     // homepage slider | slick slider
     $('.main-slider').slick({
-        autoplay: true,
-        autoplaySpeed: 3000,
-        fade: true,
-        prevArrow: $('.prev'),
-        nextArrow: $('.next'),
+      autoplay: true,
+      autoplaySpeed: 3000,
+      fade: true,
+      prevArrow: $('.prev'),
+      nextArrow: $('.next'),
     });
 
-    $('.main-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    $('.main-slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
       hideTexts();
       console.log('beforeChange');
     });
 
-    $('.main-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+    $('.main-slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
       animateTexts();
       console.log('afterChange');
     });
-    
+
     initTexts();
     animateTexts();
   }
 
   // animate search box
-  var searchButton = function() {
+  var searchButton = function () {
     // search box toggle
-    $('#header-wrap').on('click', '.search-toggle', function(e) {
+    $('#header-wrap').on('click', '.search-toggle', function (e) {
       var selector = $(this).data('selector');
 
       $(selector).toggleClass('show').find('.search-input').focus();
@@ -154,7 +154,7 @@
 
 
     // close when click off of container
-    $(document).on('click touchstart', function (e){
+    $(document).on('click touchstart', function (e) {
       if (!$(e.target).is('.search-toggle, .search-toggle *, #header-wrap, #header-wrap *')) {
         $('.search-toggle').removeClass('active');
         $('#header-wrap').removeClass('show');
@@ -163,7 +163,7 @@
   }
 
   // initialize tabs
-  var jsTabs = function() {
+  var jsTabs = function () {
     // portfolio tabs
     const tabs = document.querySelectorAll('[data-tab-target]')
     const tabContents = document.querySelectorAll('[data-tab-content]')
@@ -184,7 +184,7 @@
   }
 
   // stick header on the top
-  var stickyHeader = function() {
+  var stickyHeader = function () {
     // header menu
     var StickyHeader = new hcSticky('#header.fixed', {
       stickTo: 'body',
@@ -201,7 +201,7 @@
   //Overlay Menu Navigation
   var overlayMenu = function () {
 
-    if(!$('.nav-overlay').length) {
+    if (!$('.nav-overlay').length) {
       return false;
     }
 
@@ -223,13 +223,13 @@
       });
     };
     var toggleClass = function toggleClass(element, stringClass) {
-      if (element.classList.contains(stringClass)) element.classList.remove(stringClass);else element.classList.add(stringClass);
+      if (element.classList.contains(stringClass)) element.classList.remove(stringClass); else element.classList.add(stringClass);
     };
     var menuListeners = function menuListeners() {
       menuItem.forEach(function (item) {
         item.addEventListener('click', function (event) {
           event.preventDefault(); // Mencegah perilaku default sementara
-          
+
           // Navigasi ke ID yang ditentukan di atribut href
           var targetId = item.getAttribute('href'); // Ambil nilai href
           if (targetId.startsWith('#')) {
@@ -247,25 +247,124 @@
     };
     init();
   }
+  function formatString(input) {
+    return input
+      .replace(/[^a-zA-Z0-9]/g, '') // Menghapus karakter selain huruf dan angka
+      .toLowerCase(); // Mengubah ke huruf kecil
+  }
+  var ambilPortfolio = async function () {
+    const apiUrl = 'http://biiio-studio.com:5868/proyek'; // Ganti dengan URL API kamu
+    const containerArchitecture = document.getElementById('button-container-architecture');
+    const containerInterior = document.getElementById('button-container-interior')
+    var indexArchi = 0;
+    var indexInterior = 0;
+    try {
+      // Ambil data dari API
+      const response = await fetch(apiUrl);
+      const jsonresponse = await response.json();
+
+      if (jsonresponse.status === 200) {
+        const data = jsonresponse.data;
+        for (const item of data) {
+          if(item.kategori=="Architecture"){
+            indexArchi+=1;
+          }else{
+            indexInterior+=1;
+          }
+          // Buat elemen <a>
+          const link = document.createElement('a');
+          link.href = `#`; // Parameter href
+          if (item.kategori=="Architecture"&&indexArchi == 1) {
+            link.className = 'btn btn-outline-dark rounded-pill text-uppercase is-checked';
+          }
+          else if (item.kategori=="Interior"&&indexInterior == 1) {
+            link.className = 'btn btn-outline-dark rounded-pill text-uppercase is-checked-interior';
+          } 
+          else {
+            link.className = 'btn btn-outline-dark rounded-pill text-uppercase';
+          }
+          link.setAttribute('data-filter', `.${formatString(item.nama)}`); // Data filter
+          link.textContent = item.nama; // Text konten link
+
+          if (item.kategori == "Architecture") {
+            containerArchitecture.appendChild(link);
+          }
+          else {
+            containerInterior.appendChild(link);
+          }
+
+          const apiUrlGambar = 'http://biiio-studio.com:5868/sinkronasi/' + item.id_proyek;
+
+          const responseGambar = await fetch(apiUrlGambar);
+          const jsonresponseGambar = await responseGambar.json();
+          if (jsonresponse.status === 200) {
+            const gambar = jsonresponseGambar.data
+            for (const itemGambar of gambar) {
+              const portfolioDiv = document.createElement('div');
+              if(item.kategori == "Architecture"){
+                portfolioDiv.classList.add('col', 'mb-4', 'portfolio-item', formatString(item.nama));
+              }
+              else{
+                portfolioDiv.classList.add('col', 'mb-4', 'portfolio-item-interior', formatString(item.nama));
+              }
+
+              // Membuat elemen <a> dengan atribut href dan title
+              const link = document.createElement('a');
+              link.href = 'http://biiio-studio.com:5868/getPhoto?path=' + itemGambar.path;
+              link.classList.add('image-link');
+              link.title = item.nama;
+
+              // Membuat elemen <img> dengan atribut src dan alt
+              const img = document.createElement('img');
+              img.src = 'http://biiio-studio.com:5868/getPhoto?path=' + itemGambar.path;
+              img.classList.add('img-fluid');
+              img.alt = 'portfolio';
+
+              // Menambahkan elemen <img> ke dalam <a>
+              link.appendChild(img);
+
+              // Menambahkan elemen <a> ke dalam <div>
+              portfolioDiv.appendChild(link);
+
+              // Menambahkan <div> ke dalam container yang sudah ada
+              if (item.kategori == "Architecture") {
+                const container = document.getElementById("portfolio-architecture");
+                container.appendChild(portfolioDiv);
+              }
+              else {
+                const container = document.getElementById("portfolio-interior");
+                container.appendChild(portfolioDiv);
+              }
+
+            }
+          }
+        }
+      }
+      initIsotope();
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  }
 
   // init Chocolat light box
-  var initChocolat = function() {
+  var initChocolat = function () {
     Chocolat(document.querySelectorAll('.image-link'), {
-        imageSize: 'contain',
-        loop: true,
+      imageSize: 'contain',
+      loop: true,
     })
   }
 
-  $(document).ready(function(){
+  $(document).ready(function () {
 
+
+    ambilPortfolio();
     stickyHeader();
     searchButton();
     initSlider();
-		initIsotope();
+    // initIsotope();
     jsTabs();
     initChocolat();
     overlayMenu();
-
     jarallax(document.querySelectorAll(".jarallax"));
 
     jarallax(document.querySelectorAll(".jarallax-keep-img"), {
@@ -275,9 +374,9 @@
   }); // End of document ready
 
   // preloader
-	$(window).load(function () {
-		$(".preloader").fadeOut("slow");
-		initIsotope();
-	});
+  $(window).load(function () {
+    $(".preloader").fadeOut("slow");
+    // initIsotope();
+  });
 
 })(jQuery);
