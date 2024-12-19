@@ -355,12 +355,11 @@
   }
 
   $(document).ready(function () {
-
+    ambilPortfolio();
 
     stickyHeader();
     searchButton();
     initSlider();
-		initIsotope();
     jsTabs();
     initChocolat();
     overlayMenu();
