@@ -292,7 +292,7 @@
       .toLowerCase(); // Mengubah ke huruf kecil
   }
   var ambilPortfolio = async function () {
-    const apiUrl = 'http://biiio-studio.com:5868/proyek'; // Ganti dengan URL API kamu
+    const apiUrl = 'https://biiio-studio.com:5868/proyek'; // Ganti dengan URL API kamu
     const containerArchitecture = document.getElementById('button-container-architecture');
     const containerInterior = document.getElementById('button-container-interior')
     var indexArchi = 0;
@@ -332,7 +332,7 @@
             containerInterior.appendChild(link);
           }
 
-          const apiUrlGambar = 'http://biiio-studio.com:5868/sinkronasi/' + item.id_proyek;
+          const apiUrlGambar = 'https://biiio-studio.com:5868/sinkronasi/' + item.id_proyek;
 
           const responseGambar = await fetch(apiUrlGambar);
           const jsonresponseGambar = await responseGambar.json();
@@ -349,13 +349,13 @@
 
               // Membuat elemen <a> dengan atribut href dan title
               const link = document.createElement('a');
-              link.href = 'http://biiio-studio.com:5868/getPhoto?path=' + itemGambar.path;
+              link.href = 'https://biiio-studio.com:5868/getPhoto?path=' + itemGambar.path;
               link.classList.add('image-link');
               link.title = item.nama;
 
               // Membuat elemen <img> dengan atribut src dan alt
               const img = document.createElement('img');
-              img.src = 'http://biiio-studio.com:5868/getPhoto?path=' + itemGambar.path;
+              img.src = 'https://biiio-studio.com:5868/getPhoto?path=' + itemGambar.path;
               img.classList.add('img-fluid');
               img.alt = 'portfolio';
 
