@@ -332,7 +332,7 @@
             containerInterior.appendChild(link);
           }
 
-          const apiUrlGambar = 'https://biiio-studio.com:5868/sinkronasi/' + item.id_proyek;
+          const apiUrlGambar = 'https://biiio-studio.com:5868/sinkronasi/' + item.id;
 
           const responseGambar = await fetch(apiUrlGambar);
           const jsonresponseGambar = await responseGambar.json();
@@ -355,6 +355,7 @@
 
               // Membuat elemen <img> dengan atribut src dan alt
               const img = document.createElement('img');
+              img.loading = "lazy";
               img.src = 'https://biiio-studio.com:5868/getPhoto?path=' + itemGambar.path;
               img.classList.add('img-fluid');
               img.alt = 'portfolio';
