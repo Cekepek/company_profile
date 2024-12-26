@@ -161,7 +161,46 @@
       }
     });
   }
+    $('#form-contact').on('submit', function(event){
+      event.preventDefault();
 
+      var formData = new FormData();
+
+
+      var formData = {
+        fullname: $('#name').val(),
+        email: $('#email').val(),
+        message: $('#message').val()
+      };
+      // formData.append('id', 0);
+      // var inputName = $('#name').val();
+      // formData.append('fullname', inputName);
+
+      // var inputEmail = $('#email').val();
+      // formData.append('email', inputEmail);
+
+      // var inputMessage = $('#message').val();
+      // formData.append('message', inputMessage);
+
+
+    var jsonData = JSON.stringify(formData);
+      console.log(jsonData);
+      $.ajax({
+        url: 'https://biiio-studio.com:5868/contactUs', // Replace with your API URL
+        type: 'POST',
+        contentType: 'application/json',
+        data: jsonData,
+        contentType: false, // Tell jQuery not to set content type
+        processData: false, // Don't process the data
+        success: function(response) {
+          console.log('File and text uploaded successfully:', response);
+        },
+        error: function(xhr, status, error) {
+          console.error('Upload failed:', error);
+        }
+      });
+
+    })
   // initialize tabs
   var jsTabs = function () {
     // portfolio tabs
