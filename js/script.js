@@ -394,13 +394,8 @@
     })
   }
 
-  var contactUs = function(){
-    
-  }
 
   $(document).ready(function () {
-    ambilPortfolio();
-
     stickyHeader();
     searchButton();
     initSlider();
@@ -418,7 +413,7 @@
   // preloader
   $(window).load(function () {
     $(".preloader").fadeOut("slow");
-    // initIsotope();
+    ambilPortfolio();
   });
 
 })(jQuery);
