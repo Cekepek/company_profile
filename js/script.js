@@ -393,9 +393,9 @@
       loop: true,
     })
   }
-
-
-  $(document).ready(function () {
+  async function main() {
+    await ambilPortfolio(); // Tunggu hingga semua gambar selesai dimuat Tampilkan konten
+    
     stickyHeader();
     searchButton();
     initSlider();
@@ -408,12 +408,17 @@
       keepImg: true,
     });
 
+    $(".preloader").fadeOut("slow");
+  }
+
+  $(document).ready(function () {
+
   }); // End of document ready
 
   // preloader
-  $(window).load(function () {
-    $(".preloader").fadeOut("slow");
-    ambilPortfolio();
+  $(window).on("load", async function () {
+    $(".preloader").show(); // Pastikan preloader ditampilkan terlebih dahulu
+    await main(); 
   });
 
 })(jQuery);

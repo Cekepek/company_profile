@@ -1,0 +1,182 @@
+@font-face {
+    font-family: 'EquitanSans';
+    src: url('EquitanSans-BoldItalic.eot');
+    src: local('Equitan Sans Bold Italic'), local('EquitanSans-BoldItalic'),
+        url('EquitanSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('EquitanSans-BoldItalic.woff2') format('woff2'),
+        url('EquitanSans-BoldItalic.woff') format('woff'),
+        url('EquitanSans-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'EquitanSans';
+    src: url('EquitanSans-Black.eot');
+    src: local('Equitan Sans Blk'), local('EquitanSans-Black'),
+        url('EquitanSans-Black.eot?#iefix') format('embedded-opentype'),
+        url('EquitanSans-Black.woff2') format('woff2'),
+        url('EquitanSans-Black.woff') format('woff'),
+        url('EquitanSans-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'EquitanSans';
+    src: url('EquitanSans-BlackItalic.eot');
+    src: local('Equitan Sans Blk Italic'), local('EquitanSans-BlackItalic'),
+        url('EquitanSans-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('EquitanSans-BlackItalic.woff2') format('woff2'),
+        url('EquitanSans-BlackItalic.woff') format('woff'),
+        url('EquitanSans-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'EquitanSans';
+    src: url('EquitanSans-Bold.eot');
+    src: local('Equitan Sans Bold'), local('EquitanSans-Bold'),
+        url('EquitanSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('EquitanSans-Bold.woff2') format('woff2'),
+        url('EquitanSans-Bold.woff') format('woff'),
+        url('EquitanSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'EquitanSans';
+    src: url('EquitanSans-Regular.eot');
+    src: local('Equitan Sans'), local('EquitanSans-Regular'),
+        url('EquitanSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('EquitanSans-Regular.woff2') format('woff2'),
+        url('EquitanSans-Regular.woff') format('woff'),
+        url('EquitanSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'EquitanSans';
+    src: url('EquitanSans-Thin.eot');
+    src: local('Equitan Sans Tn'), local('EquitanSans-Thin'),
+        url('EquitanSans-Thin.eot?#iefix') format('embedded-opentype'),
+        url('EquitanSans-Thin.woff2') format('woff2'),
+        url('EquitanSans-Thin.woff') format('woff'),
+        url('EquitanSans-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'EquitanSans';
+    src: url('EquitanSans-ExtraLightItalic.eot');
+    src: local('Equitan Sans XLt Italic'), local('EquitanSans-ExtraLightItalic'),
+        url('EquitanSans-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+        url('EquitanSans-ExtraLightItalic.woff2') format('woff2'),
+        url('EquitanSans-ExtraLightItalic.woff') format('woff'),
+        url('EquitanSans-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'EquitanSans';
+    src: url('EquitanSans-SemiBold.eot');
+    src: local('Equitan Sans SBd'), local('EquitanSans-SemiBold'),
+        url('EquitanSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('EquitanSans-SemiBold.woff2') format('woff2'),
+        url('EquitanSans-SemiBold.woff') format('woff'),
+        url('EquitanSans-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'EquitanSans';
+    src: url('EquitanSans-Light.eot');
+    src: local('Equitan Sans Lt'), local('EquitanSans-Light'),
+        url('EquitanSans-Light.eot?#iefix') format('embedded-opentype'),
+        url('EquitanSans-Light.woff2') format('woff2'),
+        url('EquitanSans-Light.woff') format('woff'),
+        url('EquitanSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'EquitanSans';
+    src: url('EquitanSans-ThinItalic.eot');
+    src: local('Equitan Sans Tn Italic'), local('EquitanSans-ThinItalic'),
+        url('EquitanSans-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('EquitanSans-ThinItalic.woff2') format('woff2'),
+        url('EquitanSans-ThinItalic.woff') format('woff'),
+        url('EquitanSans-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'EquitanSans';
+    src: url('EquitanSans-Italic.eot');
+    src: local('Equitan Sans Italic'), local('EquitanSans-Italic'),
+        url('EquitanSans-Italic.eot?#iefix') format('embedded-opentype'),
+        url('EquitanSans-Italic.woff2') format('woff2'),
+        url('EquitanSans-Italic.woff') format('woff'),
+        url('EquitanSans-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'EquitanSans';
+    src: url('EquitanSans-LightItalic.eot');
+    src: local('Equitan Sans Lt Italic'), local('EquitanSans-LightItalic'),
+        url('EquitanSans-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('EquitanSans-LightItalic.woff2') format('woff2'),
+        url('EquitanSans-LightItalic.woff') format('woff'),
+        url('EquitanSans-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'EquitanSans';
+    src: url('EquitanSans-ExtraLight.eot');
+    src: local('Equitan Sans XLt'), local('EquitanSans-ExtraLight'),
+        url('EquitanSans-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('EquitanSans-ExtraLight.woff2') format('woff2'),
+        url('EquitanSans-ExtraLight.woff') format('woff'),
+        url('EquitanSans-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'EquitanSans';
+    src: url('EquitanSans-SemiBoldItalic.eot');
+    src: local('Equitan Sans SBd Italic'), local('EquitanSans-SemiBoldItalic'),
+        url('EquitanSans-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('EquitanSans-SemiBoldItalic.woff2') format('woff2'),
+        url('EquitanSans-SemiBoldItalic.woff') format('woff'),
+        url('EquitanSans-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+

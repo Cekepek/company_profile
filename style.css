@@ -113,14 +113,24 @@ CSS STRUCTURE:
 }
 
 /* Fonts */
+@font-face {
+  font-family: 'Epilogue'; /* Nama font yang akan digunakan di CSS */
+  src: 
+  /* url('/css/font/EquitanSans-Thin.woff2') format('woff2'),
+       url('/css/font/EquitanSans-Thin.woff') format('woff'), */
+       url('/css/font/Epilogue-Light.ttf') format('truetype'); /* Format fallback */
+  font-weight: normal; /* Bisa diubah ke 'bold' jika perlu */
+  font-style: normal; /* Bisa diubah ke 'italic' jika perlu */
+  
+}
 :root {
-  --body-font: "Roboto", sans-serif;
-  --heading-font: 'Montserrat', sans-serif;
+  --body-font: "Epilogue", sans-serif;
+  --heading-font: 'Epilogue', sans-serif;
 }
 
 /* Bootstrap */
 body {
-  --heading-font: "Montserrat", Roboto, sans-serif;
+  --heading-font: 'Epilogue', sans-serif;
   --heading-font-weight: 400;
   --heading-color: #111;
   --heading-line-height: 1.24;
@@ -2118,7 +2128,7 @@ body.nav-active .nav__block img {
 }
 
 .main-slider .banner-content h2.banner-title {
-  font-family: var(--heading-font);
+  font-family: "Montserrat", Roboto, sans-serif;
   font-size: 4.5em;
   font-weight: 900;
   color: #fff;
@@ -2126,7 +2136,7 @@ body.nav-active .nav__block img {
 }
 
 .main-slider .banner-content h1.banner-title {
-  font-family: var(--heading-font);
+  font-family:  "Montserrat", Roboto, sans-serif;
   font-size: 2.5em;
   font-weight: 500;
   color: #fff;
@@ -2439,6 +2449,14 @@ body.nav-active .nav__block img {
 
 /*----- About us Section
 --------------------------------------------------------------*/
+#about{
+  font-family: "Epilogue",sans-serif;
+}
+
+#about .section-title{
+  font-family: "Epilogue",sans-serif;
+}
+
 #about figure {
   margin-right: 50px;
 }
