@@ -118,19 +118,19 @@ CSS STRUCTURE:
   src: 
   /* url('/css/font/EquitanSans-Thin.woff2') format('woff2'),
        url('/css/font/EquitanSans-Thin.woff') format('woff'), */
-       url('/css/font/Epilogue-Light.ttf') format('truetype'); /* Format fallback */
+       url('/css/font/Epilogue-Medium.ttf') format('truetype'); /* Format fallback */
   font-weight: normal; /* Bisa diubah ke 'bold' jika perlu */
-  font-style: normal; /* Bisa diubah ke 'italic' jika perlu */
+  font-style: 'normal'; /* Bisa diubah ke 'italic' jika perlu */
   
 }
 :root {
   --body-font: "Epilogue", sans-serif;
-  --heading-font: 'Epilogue', sans-serif;
+  --heading-font: "Montserrat", Roboto, sans-serif;
 }
 
 /* Bootstrap */
 body {
-  --heading-font: 'Epilogue', sans-serif;
+  --heading-font: "Montserrat", Roboto, sans-serif;
   --heading-font-weight: 400;
   --heading-color: #111;
   --heading-line-height: 1.24;
@@ -925,6 +925,7 @@ input[type="submit"],
 input[type="reset"],
 input[type="file"],
 button {
+  font-family: 'Montserrat', roboto, sans-serif;
   background-image: none;
   background: var(--accent-color);
   text-decoration: none !important;
@@ -2333,7 +2334,9 @@ body.nav-active .nav__block img {
   line-height: 1;
   font-weight: 900;
 }
-
+.button-container-architecture{
+  font-family: var(--heading-font);
+}
 .section-header .title span {
   font-size: 14px;
   color: #111;
@@ -2598,6 +2601,10 @@ footer#footer {
 
 .footer-menu .menu-item {
   display: flex;
+  align-items: center;
+}
+.footer-menu .menu-item i {
+  font-size: 20px;
 }
 
 .footer-menu .menu-item a {
@@ -2895,6 +2902,8 @@ footer#footer {
 }
 
 #contact .right-content {
+  font-family: 'Montserrat', roboto, sans-serif;
+  font-weight: 100;
   width: 100%;
   background: #fff;
   padding: 88px 83px;
