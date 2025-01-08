@@ -2452,13 +2452,13 @@ body.nav-active .nav__block img {
 
 /*----- About us Section
 --------------------------------------------------------------*/
-#about{
+/* #about{
   font-family: "Epilogue",sans-serif;
 }
 
 #about .section-title{
   font-family: "Epilogue",sans-serif;
-}
+} */
 
 #about figure {
   margin-right: 50px;
