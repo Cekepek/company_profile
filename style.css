@@ -2248,9 +2248,6 @@ body.nav-active .nav__block img {
     margin-top: 250px;
   }
 
-  a.btn{
-    font-size: 10px;
-  }
 
   /* body .emailContact{
     font-size: 15px;
@@ -3077,6 +3074,18 @@ footer#footer {
     width: 100%;
     height: auto;
   }
+}
+
+
+@media (max-width: 580px) {
+
+  a.btn{
+    font-size: 10px;
+  }
+  /* #button-container-architecture,
+  #button-container-interior {
+      font-size: 10px;
+  } */
 }
 
 /*--------------------------------------------------------------
