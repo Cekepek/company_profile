@@ -66,11 +66,64 @@
           });
         });
         // });
-  
+
       });
     });
-		
-	}
+
+  }
+  // var initIsotope = function () {
+  //   $(document).ready(function () {
+  //     $('.grid').imagesLoaded(function () {
+  //       var $buttonGroup = $('.button-group');
+  //       var $checked = $buttonGroup.find('.is-checked');
+  //       var filterValue = $checked.attr('data-filter');
+
+  //       var $grid = $('.grid').isotope({
+  //         itemSelector: '.portfolio-item',
+  //         layoutMode: 'fitRows',
+  //         filter: filterValue
+  //       });
+
+  //       $('.button-group').on('click', 'a', function (e) {
+  //         e.preventDefault();
+  //         filterValue = $(this).attr('data-filter');
+  //         $grid.isotope({ filter: filterValue });
+  //       });
+
+  //       $('.button-group').each(function (i, buttonGroup) {
+  //         $buttonGroup.on('click', 'a', function () {
+  //           $buttonGroup.find('.is-checked').removeClass('is-checked');
+  //           $(this).addClass('is-checked');
+  //         });
+  //       });
+  //     });
+
+  //     $('.grid-interior').imagesLoaded(function () {
+  //       var $buttonGroup = $('.button-group-interior');
+  //       var $checked = $buttonGroup.find('.is-checked-interior');
+  //       var filterValue = $checked.attr('data-filter');
+
+  //       var $grid = $('.grid-interior').isotope({
+  //         itemSelector: '.portfolio-item-interior',
+  //         layoutMode: 'fitRows',
+  //         filter: filterValue
+  //       });
+
+  //       $('.button-group-interior').on('click', 'a', function (e) {
+  //         e.preventDefault();
+  //         filterValue = $(this).attr('data-filter');
+  //         $grid.isotope({ filter: filterValue });
+  //       });
+
+  //       $('.button-group-interior').each(function (i, buttonGroup) {
+  //         $buttonGroup.on('click', 'a', function () {
+  //           $buttonGroup.find('.is-checked-interior').removeClass('is-checked-interior');
+  //           $(this).addClass('is-checked-interior');
+  //         });
+  //       });
+  //     });
+  //   });
+  // }
 
   var initTexts = function () {
     // Wrap every letter in a span
@@ -161,46 +214,46 @@
       }
     });
   }
-    $('#form-contact').on('submit', function(event){
-      event.preventDefault();
+  $('#form-contact').on('submit', function (event) {
+    event.preventDefault();
 
-      var formData = new FormData();
+    var formData = new FormData();
 
 
-      var formData = {
-        fullname: $('#name').val(),
-        email: $('#email').val(),
-        message: $('#message').val()
-      };
-      // formData.append('id', 0);
-      // var inputName = $('#name').val();
-      // formData.append('fullname', inputName);
+    var formData = {
+      fullname: $('#name').val(),
+      email: $('#email').val(),
+      message: $('#message').val()
+    };
+    // formData.append('id', 0);
+    // var inputName = $('#name').val();
+    // formData.append('fullname', inputName);
 
-      // var inputEmail = $('#email').val();
-      // formData.append('email', inputEmail);
+    // var inputEmail = $('#email').val();
+    // formData.append('email', inputEmail);
 
-      // var inputMessage = $('#message').val();
-      // formData.append('message', inputMessage);
+    // var inputMessage = $('#message').val();
+    // formData.append('message', inputMessage);
 
 
     var jsonData = JSON.stringify(formData);
-      console.log(jsonData);
-      $.ajax({
-        url: 'https://biiio-studio.com:5868/contactUs', // Replace with your API URL
-        type: 'POST',
-        contentType: 'application/json',
-        data: jsonData,
-        contentType: false, // Tell jQuery not to set content type
-        processData: false, // Don't process the data
-        success: function(response) {
-          console.log('File and text uploaded successfully:', response);
-        },
-        error: function(xhr, status, error) {
-          console.error('Upload failed:', error);
-        }
-      });
+    console.log(jsonData);
+    $.ajax({
+      url: 'https://biiio-studio.com:5868/contactUs', // Replace with your API URL
+      type: 'POST',
+      contentType: 'application/json',
+      data: jsonData,
+      contentType: false, // Tell jQuery not to set content type
+      processData: false, // Don't process the data
+      success: function (response) {
+        console.log('File and text uploaded successfully:', response);
+      },
+      error: function (xhr, status, error) {
+        console.error('Upload failed:', error);
+      }
+    });
 
-    })
+  })
   // initialize tabs
   var jsTabs = function () {
     // portfolio tabs
@@ -305,20 +358,20 @@
       if (jsonresponse.status === 200) {
         const data = jsonresponse.data;
         for (const item of data) {
-          if(item.kategori=="Architecture"){
-            indexArchi+=1;
-          }else{
-            indexInterior+=1;
+          if (item.kategori == "Architecture") {
+            indexArchi += 1;
+          } else {
+            indexInterior += 1;
           }
           // Buat elemen <a>
           const link = document.createElement('a');
           link.href = `#`; // Parameter href
-          if (item.kategori=="Architecture"&&indexArchi == 1) {
+          if (item.kategori == "Architecture" && indexArchi == 1) {
             link.className = 'btn btn-outline-dark rounded-pill text-uppercase is-checked';
           }
-          else if (item.kategori=="Interior"&&indexInterior == 1) {
+          else if (item.kategori == "Interior" && indexInterior == 1) {
             link.className = 'btn btn-outline-dark rounded-pill text-uppercase is-checked-interior';
-          } 
+          }
           else {
             link.className = 'btn btn-outline-dark rounded-pill text-uppercase';
           }
@@ -340,10 +393,10 @@
             const gambar = jsonresponseGambar.data
             for (const itemGambar of gambar) {
               const portfolioDiv = document.createElement('div');
-              if(item.kategori == "Architecture"){
+              if (item.kategori == "Architecture") {
                 portfolioDiv.classList.add('col', 'mb-4', 'portfolio-item', formatString(item.nama));
               }
-              else{
+              else {
                 portfolioDiv.classList.add('col', 'mb-4', 'portfolio-item-interior', formatString(item.nama));
               }
 
@@ -395,7 +448,7 @@
   }
   async function main() {
     await ambilPortfolio(); // Tunggu hingga semua gambar selesai dimuat Tampilkan konten
-    
+
     stickyHeader();
     searchButton();
     initSlider();
@@ -418,7 +471,7 @@
   // preloader
   $(window).on("load", async function () {
     $(".preloader").show(); // Pastikan preloader ditampilkan terlebih dahulu
-    await main(); 
+    await main();
   });
 
 })(jQuery);

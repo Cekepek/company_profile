@@ -25,6 +25,21 @@
 	<link
 		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
 		rel="stylesheet">
+		<script>
+			!function(f,b,e,v,n,t,s)
+			{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+			n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+			if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+			n.queue=[];t=b.createElement(e);t.async=!0;
+			t.src=v;s=b.getElementsByTagName(e)[0];
+			s.parentNode.insertBefore(t,s)}(window, document,'script',
+			'https://connect.facebook.net/en_US/fbevents.js');
+			fbq('init', '1637864336818701');
+			fbq('track', 'PageView');
+			</script>
+			<noscript><img height="1" width="1" style="display:none"
+			src="https://www.facebook.com/tr?id=1637864336818701&ev=PageView&noscript=1"
+			/></noscript>
 </head>
 
 <body>
@@ -300,7 +315,6 @@
 							</div>
 							<h2 class="section-title">Contact us</h2>
 						</div>
-
 						<p>Have any question about our practice and design process? Let us know how we can help you.</p>
 
 						<form id="form-contact" class="form-light">
@@ -331,20 +345,19 @@
 					<div class="right-content">
 						<div class="iconbox">
 							<i class="icon icon-phone"></i>
-							<div class="detail">
-								<strong><a href="https://api.whatsapp.com/send?phone=6287708956562">+62 877 089 5656 2</a></strong>
+							<div class="detail" style="font-size: 20px;">
+								<a href="https://api.whatsapp.com/send?phone=6287708956562" onclick="fbq('track', 'lead', {link: 'Whatsapp Contact 1'});"><b>+62 877 089 5656 2</b></a>
 							</div>
 						</div>
 						<div class="iconbox">
 							<i class="icon icon-phone"></i>
-							<div class="detail">
-								<strong><a href="https://api.whatsapp.com/send?phone=6282234229424">+62 822 3422 9424</a></strong>
+							<div class="detail" style="font-size: 20px;"><a href="https://api.whatsapp.com/send?phone=6282234229424" onclick="fbq('track', 'lead', {link: 'Whatsapp Contact 1'});"><b>+62 822 3422 9424</b></a>
 							</div>
 						</div>
 						<div class="iconbox">
 							<i class="icon icon-mail3"></i>
 							<div class="detail">
-								<p style="font-size: 20px;"><a href="#"><b>biiiostudio.id@gmail.com</b></a></p>
+								<p style="font-size: 20px; word-wrap: break-word; overflow-wrap: break-word; white-space: normal;"><a href="#"><b>biiiostudio.id@gmail.com</b></a></p>
 							</div>
 						</div>
 						<div class="iconbox">
@@ -361,6 +374,12 @@
 
 		</div>
 	</section>
+
+
+	<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+	<a href="https://api.whatsapp.com/send?phone=6287708956562" class="floating" onclick="fbq('track', 'lead', {button: 'WhatsApp'});"><i
+			class="fa fa-whatsapp float-button"></i></a>
+	<a href="https://www.instagram.com/biiio.studio/" class="floating2" onclick="fbq('track', 'lead', {button: 'Instagram'});"><i class="fa fa-instagram float-button"></i></a>
 
 	<footer id="footer">
 		<div class="container">
@@ -402,13 +421,13 @@
 						<h5>contact info</h5>
 						<ul class="menu-list">
 							<li class="menu-item">
-								<i class="fa fa-instagram me-2"> biiio.studio</i>
+								<a href="https://www.instagram.com/biiio.studio/"><i class="fa fa-instagram me-2"> </i>biiio.studio</a>
 							</li>
 							<li class="menu-item">
 								<i class="fa fa-envelope me-2"></i>biiiostudio.id@gmail.com
 							</li>
 							<li class="menu-item">
-								<i class="fa fa-phone me-2"></i>+62 87708956562
+								<a href="https://api.whatsapp.com/send?phone=6287708956562" onclick="fbq('track', 'lead', {link: 'WhatsApp Footer'});"><i class="fa fa-phone me-2"></i>+62 87708956562</a>
 							</li>
 						</ul>
 					</div>
@@ -418,11 +437,6 @@
 			</div>
 		</div>
 	</footer>
-
-	<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-	<a href="https://api.whatsapp.com/send?phone=6287708956562" class="floating"><i
-			class="fa fa-whatsapp float-button"></i></a>
-	<a href="https://www.instagram.com/biiio.studio/" class="floating2"><i class="fa fa-instagram float-button"></i></a>
 	<script src="js/jquery-1.11.0.min.js"></script>
 	<script src="js/isotope.pkgd.min.js"></script>
 	<script src="js/ui-easing.js"></script>
@@ -431,6 +445,9 @@
 		crossorigin="anonymous"></script>
 	<script src="js/plugins.js"></script>
 	<script src="js/script.js"></script>
+	<!-- Meta Pixel Code -->
+	
+	<!-- End Meta Pixel Code -->
 
 </body>
 
