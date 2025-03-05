@@ -2149,6 +2149,12 @@ body.nav-active .nav__block img {
   font-size: inherit;
 } */
 
+.emailContact{
+  font-size: 20px; 
+  word-wrap: break-word; 
+  overflow-wrap: break-word; 
+  white-space: normal;
+}
 
 #intro .button-container {
   display: flex;
@@ -2236,10 +2242,19 @@ body.nav-active .nav__block img {
   }
 }
 
+
 @media only screen and (max-width: 580px) {
   .main-slider .banner-content {
     margin-top: 250px;
   }
+
+  a.btn{
+    font-size: 10px;
+  }
+
+  /* body .emailContact{
+    font-size: 15px;
+  } */
 
   .main-slider .banner-content {
     width: 90%;
@@ -2909,6 +2924,10 @@ footer#footer {
   padding: 88px 83px;
 }
 
+#contact p#emailContact{
+  font-size: 20px;
+}
+
 @media only screen and (max-width: 1170px) {
   #contact .left-content {
     margin-right: 60px;
@@ -2949,6 +2968,11 @@ footer#footer {
     width: 100%;
     padding: 40px;
     margin-top: 40px;
+  }
+}
+@media only screen and (max-width: 580px) {
+  #contact p#emailContact{
+    font-size: 15px;
   }
 }
 
