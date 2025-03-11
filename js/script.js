@@ -408,7 +408,7 @@
 
               // Membuat elemen <img> dengan atribut src dan alt
               const img = document.createElement('img');
-              img.loading = "lazy";
+              // img.loading = "lazy";
               img.src = 'https://biiio-studio.com:5868/getPhoto?path=' + itemGambar.path;
               img.classList.add('img-fluid');
               img.alt = 'portfolio';
