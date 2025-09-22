@@ -239,7 +239,7 @@
     var jsonData = JSON.stringify(formData);
     console.log(jsonData);
     $.ajax({
-      url: 'https://biiio-studio.com:5868/contactUs', // Replace with your API URL
+      url: 'https://biiiostudio.com:5868/contactUs', // Replace with your API URL
       type: 'POST',
       contentType: 'application/json',
       data: jsonData,
@@ -345,7 +345,7 @@
       .toLowerCase(); // Mengubah ke huruf kecil
   }
   var ambilPortfolio = async function () {
-    const apiUrl = 'https://biiio-studio.com:5868/proyek'; // Ganti dengan URL API kamu
+    const apiUrl = 'https://biiiostudio.com:5868/proyek'; // Ganti dengan URL API kamu
     const containerArchitecture = document.getElementById('button-container-architecture');
     const containerInterior = document.getElementById('button-container-interior')
     var indexArchi = 0;
@@ -385,7 +385,7 @@
             containerInterior.appendChild(link);
           }
 
-          const apiUrlGambar = 'https://biiio-studio.com:5868/sinkronasi/' + item.id;
+          const apiUrlGambar = 'https://biiiostudio.com:5868/sinkronasi/' + item.id;
 
           const responseGambar = await fetch(apiUrlGambar);
           const jsonresponseGambar = await responseGambar.json();
@@ -402,14 +402,14 @@
 
               // Membuat elemen <a> dengan atribut href dan title
               const link = document.createElement('a');
-              link.href = 'https://biiio-studio.com:5868/getPhoto?path=' + itemGambar.path;
+              link.href = 'https://biiiostudio.com:5868/getPhoto?path=' + itemGambar.path;
               link.classList.add('image-link');
               link.title = item.nama;
 
               // Membuat elemen <img> dengan atribut src dan alt
               const img = document.createElement('img');
               // img.loading = "lazy";
-              img.src = 'https://biiio-studio.com:5868/getPhoto?path=' + itemGambar.path;
+              img.src = 'https://biiiostudio.com:5868/getPhoto?path=' + itemGambar.path;
               img.classList.add('img-fluid');
               img.alt = 'portfolio';
 
