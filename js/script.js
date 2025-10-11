@@ -447,7 +447,6 @@
     })
   }
   async function main() {
-    await ambilPortfolio(); // Tunggu hingga semua gambar selesai dimuat Tampilkan konten
 
     stickyHeader();
     searchButton();
@@ -462,6 +461,7 @@
     });
 
     $(".preloader").fadeOut("slow");
+    ambilPortfolio(); // Tunggu hingga semua gambar selesai dimuat Tampilkan konten
   }
 
   $(document).ready(function () {
