@@ -15,7 +15,7 @@
 
         var $grid = $('.grid').isotope({
           itemSelector: '.portfolio-item',
-          // layoutMode: 'fitRows',
+          layoutMode: 'masonry',
           filter: filterValue
         });
 
@@ -47,7 +47,7 @@
 
         var $grid = $('.grid-interior').isotope({
           itemSelector: '.portfolio-item-interior',
-          // layoutMode: 'fitRows',
+          layoutMode: 'masonry',
           filter: filterValue
         });
 
